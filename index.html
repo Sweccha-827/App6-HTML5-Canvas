@@ -56,8 +56,10 @@ function DrawName(){
 function DrawImage(){
 	var c = document.getElementById("HTMLCanvas");
 	var ctx = c.getContext("2d");
-	var img = document.getElementById("cutedog.jpeg");
-	ctx.drawImage(img, 10, 10);
+	var cutedog = document.getElementById("cutedog.jpeg");
+	cutedog.onload = function() {
+	ctx.drawImage(cutedog, 10, 10, 100, 100);
+	}; 
 	}
 	
 </script>
