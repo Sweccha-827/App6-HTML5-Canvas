@@ -42,10 +42,9 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 function DrawRectangle(){
 	var c = document.getElementById("myCanvas");
 	var ctx = c.getContext("2d");
-	ctx.beginPath();
 	ctx.strokeRect(3, 4, 100, 200);
-	ctx.stroke();
 }
+	
 </script>
 
 
@@ -80,10 +79,9 @@ function DrawRectangle(){
 		
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
-	<canvas id="HTMLCanvas" width="500" height="500" style="border:3px solid #000000;">
+	<canvas id="HTMLCanvas" width="500" height="500" style="border:3px solid #000000;"> <!--Inserted a canvas "HTMLCanvas" with the width = 500 and height = 500-->
 </canvas>
-	<a href="#DrawRectangle" class="w3-btn w3-grey w3-round"> Draw a Rectangle. </a> <!--This is the button on the home page for "Get Started" button-->
-	
+	<a href="#content"  onclick="DrawRectangle();" class="w3-btn w3-black"> Draw a Rectangle. </a> <!--This is the button on the home page for "Draw a rectangle" button-->
 	</div>
 
 
