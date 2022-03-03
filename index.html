@@ -40,11 +40,18 @@ alert("This file last modified " + docMod); // generates alert box with time sta
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 	
 function DrawRectangle(){
-	var c = document.getElementById("HTMLCanvas");
-	var ctx = c.getContext("2d");
-	ctx.beginPath();
-	ctx.strokeRect(3, 4, 100, 200);
-	ctx.stroke();
+	var a = document.getElementById("HTMLCanvas");
+	var atx = a.getContext("2d");
+	atx.beginPath();
+	atx.strokeRect(3, 4, 100, 200);
+	atx.stroke();
+	}
+	
+function DrawName(){
+	var b = document.getElementById("myCanvas");
+	var btx = c.getContext("2d");
+	btx.font = "30px Arial";
+	btx.fillText("Sweccha Guntamukkala", 10, 50);
 	}
 	
 </script>
@@ -85,6 +92,9 @@ function DrawRectangle(){
 </canvas>
 	
 	<button onclick="DrawRectangle();"> Draw a Rectangle. </button> <!--This is the button on the home page for "Draw a rectangle" button-->
+	
+	<button onclick="DrawName();"> Draw a name. </button> <!--This is the button on the home page for "Draw a name" button-->
+
 		
 	</div>
 
