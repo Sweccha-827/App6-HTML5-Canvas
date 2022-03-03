@@ -42,16 +42,16 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 function DrawRectangle(){ //Function that draws a rectangle.
 	var a = document.getElementById("HTMLCanvas");
 	var atx = a.getContext("2d");
-	atx.beginPath();
-	atx.strokeRect(3, 4, 100, 200);
-	atx.stroke();
+	atx.beginPath(); //Codes for the outline of a rectangle 
+	atx.strokeRect(3, 4, 100, 200); //Codes for the dimensions of the rectangle (x, y, width, height)
+	atx.stroke(); //Codes for the outline of a rectangle 
 }
 	
 function DrawName(){ //Function that draws a name.
 	var b = document.getElementById("HTMLCanvas");
 	var btx = b.getContext("2d");
-	btx.font = "15px Arial";
-	btx.fillText("Sweccha Guntamukkala", 50, 80);
+	btx.font = "15px Arial"; //Codes for the font of the text 
+	btx.fillText("Sweccha Guntamukkala", 50, 80); //Codes for what the text should say: "My Name" 
 }
 	
 function DrawImage(){ //Function that draws an image.
@@ -60,7 +60,7 @@ function DrawImage(){ //Function that draws an image.
 	var cutedog = new Image();
 	cutedog.src = "cutedog.jpeg";
 	cutedog.onload = function() {
-	ctx.drawImage(cutedog, 2, 2, 50, 50);
+	ctx.drawImage(cutedog, 2, 2, 50, 50); //Codes for the dimensions of the image.
 	}; 
 }
 	
