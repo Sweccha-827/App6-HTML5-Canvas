@@ -47,14 +47,14 @@ function DrawRectangle(){ //Function that draws a rectangle.
 	atx.stroke();
 }
 	
-function DrawName(){
+function DrawName(){ //Function that draws a name.
 	var b = document.getElementById("HTMLCanvas");
 	var btx = b.getContext("2d");
 	btx.font = "15px Arial";
 	btx.fillText("Sweccha Guntamukkala", 50, 80);
 }
 	
-function DrawImage(){
+function DrawImage(){ //Function that draws an image.
 	var c = document.getElementById("HTMLCanvas");
 	var ctx = c.getContext("2d");
 	var cutedog = new Image();
@@ -64,9 +64,8 @@ function DrawImage(){
 	}; 
 }
 	
-function Clear(){
+function Clear(){ //Function that resets the canvas.
 	var d = document.getElementById("HTMLCanvas");
-	var dtx = d.getContext("2d");
 	d_canvas.width = d_canvas.width
 }
 
