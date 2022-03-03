@@ -42,8 +42,10 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 function DrawRectangle(){
 	var c = document.getElementById("myCanvas");
 	var ctx = c.getContext("2d");
+	ctx.beginPath();
 	ctx.strokeRect(3, 4, 100, 200);
-}
+	ctx.stroke();
+	}
 	
 </script>
 
@@ -81,7 +83,7 @@ function DrawRectangle(){
  	
 	<canvas id="HTMLCanvas" width="500" height="500" style="border:3px solid #000000;"> <!--Inserted a canvas "HTMLCanvas" with the width = 500 and height = 500-->
 </canvas>
-	<a href="#content"  onclick="DrawRectangle();" class="w3-btn w3-black"> Draw a Rectangle. </a> <!--This is the button on the home page for "Draw a rectangle" button-->
+	<a href="#content" onclick="DrawRectangle()" class="w3-btn w3-black"> Draw a Rectangle. </a> <!--This is the button on the home page for "Draw a rectangle" button-->
 	</div>
 
 
