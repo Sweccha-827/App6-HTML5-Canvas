@@ -89,8 +89,22 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	
 <div id="content" class="w3-container"> 	
 	<p>Here's a canvas. Try it out!</p>	<!--Inserted content for question 1-->
-	<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+	<canvas id="HTMLCanvas" width="500" height="500" style="border:3px solid #000000;">
 </canvas>
+
+	<a href="#one" class="w3-btn w3-grey w3-round"> Draw a Rectangle 
+	<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.strokeRect(3, 4, 100, 200);
+ctx.stroke();
+</script> 
+
+		</a> <!--This is the button on the home page for "Get Started" button-->
+</body>
+</html>
+	
  </div><!-- /content -->
 	<footer class="w3-bottom w3-container w3-flat-carrot">	<!--This is the orange header-->
 	<p>DIY!</p>	<!--Text for header-->
