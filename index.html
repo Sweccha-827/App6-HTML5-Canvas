@@ -45,22 +45,24 @@ function DrawRectangle(){
 	atx.beginPath();
 	atx.strokeRect(3, 4, 100, 200);
 	atx.stroke();
-	}
+}
 	
 function DrawName(){
 	var b = document.getElementById("HTMLCanvas");
 	var btx = b.getContext("2d");
 	btx.font = "15px Arial";
 	btx.fillText("Sweccha Guntamukkala", 50, 80);
-	}
+}
+	
 function DrawImage(){
 	var c = document.getElementById("HTMLCanvas");
 	var ctx = c.getContext("2d");
-	var cutedog = document.getElementById("cutedog.jpeg");
+	var cutedog = Image();
+	cutedog.src = "cutedog.jpeg";
 	cutedog.onload = function() {
 	ctx.drawImage(cutedog, 10, 10, 100, 100);
 	}; 
-	}
+}
 	
 </script>
 
