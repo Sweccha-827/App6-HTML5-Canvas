@@ -39,13 +39,13 @@ var docMod = document.lastModified; // loads last modified time stamp into docMo
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 	
-function DrawRectangle() {
+function DrawRectangle(){
 	var c = document.getElementById("myCanvas");
 	var ctx = c.getContext("2d");
 	ctx.beginPath();
 	ctx.strokeRect(3, 4, 100, 200);
 	ctx.stroke();
-	
+}
 </script>
 
 
@@ -82,7 +82,7 @@ function DrawRectangle() {
  	
 	<canvas id="HTMLCanvas" width="500" height="500" style="border:3px solid #000000;">
 </canvas>
-	<a href="#content" class="w3-btn w3-grey w3-round"> Get Started </a> <!--This is the button on the home page for "Get Started" button-->
+	<a href="#DrawRectangle" class="w3-btn w3-grey w3-round"> Draw a Rectangle. </a> <!--This is the button on the home page for "Get Started" button-->
 	
 	</div>
 
