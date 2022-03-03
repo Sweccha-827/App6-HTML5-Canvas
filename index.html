@@ -57,10 +57,10 @@ function DrawName(){
 function DrawImage(){
 	var c = document.getElementById("HTMLCanvas");
 	var ctx = c.getContext("2d");
-	var cutedog = Image();
+	var cutedog = new Image();
 	cutedog.src = "cutedog.jpeg";
 	cutedog.onload = function() {
-	ctx.drawImage(cutedog, 10, 10, 100, 100);
+	ctx.drawImage(cutedog, 2, 2, 50, 50);
 	}; 
 }
 	
