@@ -53,6 +53,12 @@ function DrawName(){
 	btx.font = "15px Arial";
 	btx.fillText("Sweccha Guntamukkala", 50, 80);
 	}
+function DrawImage(){
+	var c = document.getElementById("HTMLCanvas");
+	var ctx = c.getContext("2d");
+	var img = document.getElementById("cutedog.jpeg");
+	ctx.drawImage(img, 10, 10);
+	}
 	
 </script>
 
@@ -95,6 +101,7 @@ function DrawName(){
 	
 	<button onclick="DrawName();"> Draw a name. </button> <!--This is the button on the home page for "Draw a name" button-->
 
+	<button onclick="DrawImage();"> Draw an image. </button> <!--This is the button on the home page for "Draw an Image" button-->
 		
 	</div>
 
