@@ -33,42 +33,42 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
 
-
-<script> //This is the script where I define my functions and variables.
+<!--This is the script where I define my functions and variables.-->
+<script> 
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 	
-function DrawRectangle(){ //This is the function that draws a rectangle.
-	var a = document.getElementById("HTMLCanvas"); //This identifies the canvas to draw on.
-	var atx = a.getContext("2d"); //This further identifies the canvas and defines the 2d context. 
-	atx.fillRect(50, 25, 140, 110); //This codes for the dimensions of the rectangle (x, y, width, height) and fills it.
+function DrawRectangle(){ // This is the function that draws a rectangle.
+	var a = document.getElementById("HTMLCanvas"); // This identifies the canvas to draw on.
+	var atx = a.getContext("2d"); // This further identifies the canvas and defines the 2d context. 
+	atx.fillRect(50, 25, 140, 110); // This codes for the dimensions of the rectangle (x, y, width, height) and fills it.
 }
 	
-function DrawName(){ //This is the function that draws my name.
-	var b = document.getElementById("HTMLCanvas"); //This identifies the canvas to draw on.
-	var btx = b.getContext("2d"); //This further identifies the canvas and defines the 2d context. 
-	btx.font = "15px Arial"; //This codes for the font of the text in 15pt Arial.
-	btx.fillText("Sweccha Guntamukkala", 100, 100); //This codes for what the text should say: "My Name" and the size of the text.
+function DrawName(){ // This is the function that draws my name.
+	var b = document.getElementById("HTMLCanvas"); // This identifies the canvas to draw on.
+	var btx = b.getContext("2d"); // This further identifies the canvas and defines the 2d context. 
+	btx.font = "15px Arial"; // This codes for the font of the text in 15pt Arial.
+	btx.fillText("Sweccha Guntamukkala", 100, 100); // This codes for what the text should say: "My Name" and the size of the text.
 }
 	
 function DrawImage(){ //This is the function that draws an image- a dog.
-	var c = document.getElementById("HTMLCanvas"); //This identifies the canvas to draw on.
-	var ctx = c.getContext("2d"); //This further identifies the canvas and defines the 2d context. 
-	var cutedog = new Image(); //This defines a new variable for my image.
-	cutedog.src = "cutedog.jpeg"; //This is the image source for the image. 
-	cutedog.onload = function() { //This is a new function for the image to appear on the canvas.
-	ctx.drawImage(cutedog, 2, 2, 50, 50); //Codes for the dimensions of the image.
+	var c = document.getElementById("HTMLCanvas"); // This identifies the canvas to draw on.
+	var ctx = c.getContext("2d"); // This further identifies the canvas and defines the 2d context. 
+	var cutedog = new Image(); // This defines a new variable for my image.
+	cutedog.src = "cutedog.jpeg"; // This is the image source for the image. 
+	cutedog.onload = function() { // This is a new function for the image to appear on the canvas.
+	ctx.drawImage(cutedog, 2, 2, 50, 50); // Codes for the dimensions of the image.
 	}; 
 }
 	
-function Clear(){ //This is the function that resets the canvas.
-	var d = document.getElementById("HTMLCanvas"); //This identifies the canvas to clear.
-	d.width = d.width; //This sets the width of the canvas equal to each other to erase its contents and resets it to its original setting.
+function Clear(){ // This is the function that resets the canvas.
+	var d = document.getElementById("HTMLCanvas"); // This identifies the canvas to clear.
+	d.width = d.width; // This sets the width of the canvas equal to each other to erase its contents and resets it to its original setting.
 }
 
 	
-</script> //This is the end of the script section where my functions and variables are defined
+</script> <!--This is the end of the script section where my functions and variables are defined-->
 
 
 
