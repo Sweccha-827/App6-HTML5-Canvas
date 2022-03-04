@@ -17,7 +17,7 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-The goal of this code is to present a canvas, draw a rectangle, draw a name, draw an image, and clear the canvas.
+The goal of this code is to present a canvas with a border, draw a rectangle in the canvas, draw a name in the canvas, draw an image in the canvas, and clear the canvas.
  
 Known Issues:
 There are no known issues in the code.
@@ -26,55 +26,53 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 -->
 	
    <head> 
-      <title>App 6: HTML5-Canvas</title>  
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>App 6: HTML5-Canvas</title> <!--This is the title for the header on the home page-->
+      <meta name="viewport" content="width=device-width, initial-scale=1"> <!--This and the following code formats how the header on the home page looks. 
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
 
 
-<script>
+<script> //This is the script where I define my functions and variables.
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 	
-function DrawRectangle(){ //Function that draws a rectangle.
-	var a = document.getElementById("HTMLCanvas");
-	var atx = a.getContext("2d");
-	atx.beginPath(); //Codes for the outline of a rectangle 
-	atx.strokeRect(3, 4, 100, 200); //Codes for the dimensions of the rectangle (x, y, width, height)
-	atx.stroke(); //Codes for the outline of a rectangle 
+function DrawRectangle(){ //This is the function that draws a rectangle.
+	var a = document.getElementById("HTMLCanvas"); //This identifies the canvas to draw on.
+	var atx = a.getContext("2d"); //This further identifies the canvas and defines the 2d context. 
+	atx.fillRect(50, 25, 140, 110); //This codes for the dimensions of the rectangle (x, y, width, height) and fills it.
 }
 	
-function DrawName(){ //Function that draws a name.
-	var b = document.getElementById("HTMLCanvas");
-	var btx = b.getContext("2d");
-	btx.font = "15px Arial"; //Codes for the font of the text 
-	btx.fillText("Sweccha Guntamukkala", 50, 80); //Codes for what the text should say: "My Name" 
+function DrawName(){ //This is the function that draws my name.
+	var b = document.getElementById("HTMLCanvas"); //This identifies the canvas to draw on.
+	var btx = b.getContext("2d"); //This further identifies the canvas and defines the 2d context. 
+	btx.font = "15px Arial"; //This codes for the font of the text in 15pt Arial.
+	btx.fillText("Sweccha Guntamukkala", 100, 100); //This codes for what the text should say: "My Name" and the size of the text.
 }
 	
-function DrawImage(){ //Function that draws an image.
-	var c = document.getElementById("HTMLCanvas");
-	var ctx = c.getContext("2d");
-	var cutedog = new Image();
-	cutedog.src = "cutedog.jpeg";
-	cutedog.onload = function() {
+function DrawImage(){ //This is the function that draws an image- a dog.
+	var c = document.getElementById("HTMLCanvas"); //This identifies the canvas to draw on.
+	var ctx = c.getContext("2d"); //This further identifies the canvas and defines the 2d context. 
+	var cutedog = new Image(); //This defines a new variable for my image.
+	cutedog.src = "cutedog.jpeg"; //This is the image source for the image. 
+	cutedog.onload = function() { //This is a new function for the image to appear on the canvas.
 	ctx.drawImage(cutedog, 2, 2, 50, 50); //Codes for the dimensions of the image.
 	}; 
 }
 	
-function Clear(){ //Function that resets the canvas.
-	var d = document.getElementById("HTMLCanvas");
-	d.width = d.width;
+function Clear(){ //This is the function that resets the canvas.
+	var d = document.getElementById("HTMLCanvas"); //This identifies the canvas to clear.
+	d.width = d.width; //This sets the width of the canvas equal to each other to erase its contents and resets it to its original setting.
 }
 
 	
-</script>
+</script> //This is the end of the script section where my functions and variables are defined
 
 
 
-<style>	
+<style>	 <!--This is the style of the page of App 6-->
 .body {
      margin: 0em;
 }
@@ -92,22 +90,24 @@ function Clear(){ //Function that resets the canvas.
     left: 0vw;
     z-index: 1;
 }
-</style>
+</style> <!--This is the end of the style section for App 6-->
 
-<body>
-<div id="header" class="w3-container w3-flat-carrot">
+<body> <!--This is the beginning of the text and content of the web page.-->
+<div id="header" class="w3-container w3-flat-carrot"> <!--This determines the color of the header-->
 	<h1>App6---HTML5-Canvas</h1> <!--This is the title of the code for the header on the home page-->
 </div>
 	
-<div id="content" class="w3-container">
+<div id="content" class="w3-container"> <!--This is the start of the contents of App 6-->
 	<p>Here's a canvas. Try it out!</p> <!--This is the text for the home page-->
 		
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
- 	
+ 	<!--This is the text for the homepage-->
+
 	<canvas id="HTMLCanvas" width="500" height="500" style="border:3px solid #000000;"> <!--Inserted a canvas "HTMLCanvas" with the width = 500 and height = 500-->
-</canvas>
+<!--This creates the canvas for the homepage. It has a width of 500 and height of 500 and has a solid border that is 3px-->
+	</canvas>
 	
-	<br> <button onclick="DrawRectangle();"> Draw a Rectangle. </button> <!--This is the button on the home page for the "Draw a rectangle" button-->
+	<br> <button onclick="DrawRectangle();"> Draw a Rectangle. </button> <!--This inserts a line break and also the button on the home page for the "Draw a rectangle" button-->
 	
 	<button onclick="DrawName();"> Draw a Name. </button> <!--This is the button on the home page for the "Draw a name" button-->
 
@@ -122,5 +122,5 @@ function Clear(){ //Function that resets the canvas.
 	<p>DIY!</p> <!--This is the text for the footer.-->
 </footer>
 
-</body>
+</body> <!--This is the end of the body of the webpage-->
 </html>
